@@ -15,6 +15,10 @@ capi: default
 install:
 	mkdir -p "$(DESTDIR)$(prefix)/include/uWebSockets"
 	cp -r src/* "$(DESTDIR)$(prefix)/include/uWebSockets"
+	cp -r uSockets/uSockets.a "$(DESTDIR)$(prefix)/lib/"
+	cp -r uSockets/src/libusockets.h "$(DESTDIR)$(prefix)/include/uWebSockets"
+
+
 
 all: default
 	./build all
